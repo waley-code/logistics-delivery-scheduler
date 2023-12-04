@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>Delivery Scheduler</title>
+</head>
+
+<body>
+    <div style="display: flex; gap: 10px; padding: 20px;">
+
+        <div>
+            <table class="tables_ui" id="t_draggable1">
+                <caption>
+                    <h4>Customers Table</h4>
+                </caption>
+                <tbody class="t_sortable" id="customerTableBody">
+                    <tr>
+                        <th>customer ID</th>
+                        <th>Customer Name</th>
+                        <th>Pick Up location</th>
+                        <th>Drop off Location</th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div style=" gap: 10px;">
+            <table class="tables_ui">
+                <caption><h4>Delivery Schedules</h4></caption>
+                <thead>
+                    <tr>
+                        <th>
+                            <div style="flex: 1;">
+                                <h4>Days</h4>
+                            </div>
+                        </th>
+                        <th>
+                            <div style="flex: 1;">
+                                <h4>Slot 1</h4>
+                            </div>
+                        </th>
+                        <th>
+                            <div style="flex: 1;">
+                                <h4>Slot 2</h4>
+                            </div>
+                        </th>
+                        <th>
+                            <div style="flex: 1;">
+                                <h4>Slot 3</h4>
+                            </div>
+                        </th>
+                        <th>
+                            <div style="flex: 1;">
+                                <h4>Slot 4</h4>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="scheduleRow1">
+                        <td>
+                            <div style="flex: 1; padding: 20px;">
+                                <h4 class="day"></h4>
+                <p class="date"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable1" >
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="scheduleRow2">
+                        <td>
+                            <div style="flex: 1; padding: 20px;">
+                                <h4 class="day"></h4>
+                <p class="date"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable1" >
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="scheduleRow3">
+                        <td>
+                            <div style="flex: 1; padding: 20px;">
+                                <h4 class="day"></h4>
+                <p class="date"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable1" >
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="scheduleRow4">
+                        <td>
+                            <div style="flex: 1; padding: 20px;">
+                                <h4 class="day"></h4>
+                <p class="date"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable1" >
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="scheduleRow5">
+                        <td>
+                            <div style="flex: 1; padding: 20px;">
+                                <h4 class="day"></h4>
+                <p class="date"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable1" >
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="scheduleRow6">
+                        <td>
+                            <div style="flex: 1; padding: 20px;">
+                                <h4 class="day"></h4>
+                <p class="date"></p>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable1" >
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="tables_ui" id="t_draggable2">
+                                <tbody class="t_sortable" >
+                                    <tr>
+                                        <th>customer ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Pick Up location</th>
+                                        <th>Drop off Location</th>
+                                    </tr>
+                                    <tr>
+                                        <td>36</td>
+                                        <td>78</td>
+                                        <td>100.9</td>
+                                        <td>1.82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>236</td>
+                                        <td>668</td>
+                                        <td>10.95</td>
+                                        <td>12.80</td>
+                                    </tr>
+                
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+    <script>
+        // Generate random customer data using faker.js
+        function generateRandomCustomerData() {
+          return {
+            customerId: faker.random.number(),
+            customerName: faker.name.findName(),
+            pickUpLocation: faker.address.city(),
+            dropOffLocation: faker.address.city(),
+          };
+        }
+    
+        // Populate the table body with random customer data
+        function populateCustomerTableBody() {
+          const tableBody = document.getElementById('customerTableBody');
+    
+          for (let i = 0; i < 18; i++) { // Generating data for 18 customers, you can adjust as needed
+            const customerData = generateRandomCustomerData();
+    
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${customerData.customerId}</td>
+              <td>${customerData.customerName}</td>
+              <td>${customerData.pickUpLocation}</td>
+              <td>${customerData.dropOffLocation}</td>
+            `;
+    
+            tableBody.appendChild(row);
+          }
+        }
+    
+        // Populate the schedule rows with dates and day names
+        function populateScheduleRows() {
+          const days = ['', '', '', '', '', '', ''];
+          const currentDate = new Date();
+    
+          for (let i = 0; i < 7; i++) {
+            const date = new Date(currentDate);
+            date.setDate(currentDate.getDate() + i);
+    
+            const row = document.getElementById(`scheduleRow${i + 1}`);
+            row.querySelector('.day').innerText = days[date.getDay()];
+            row.querySelector('.date').innerText = date.toDateString();
+          }
+        }
+    
+        // Call the functions to populate the table bodies
+        populateCustomerTableBody();
+        populateScheduleRows();
+    </script>
+    
+    
+</body>
+<footer style="text-align: center; padding: 20px;">
+    <p> Created by Waley-Code&copy; 2023</p>
+</footer>
+</html>
