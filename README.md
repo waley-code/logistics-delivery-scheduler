@@ -3,7 +3,7 @@
 
 ## Overview
 
-The Delivery Scheduler project is a logistics solution designed to help manage and organize delivery schedules efficiently. It provides a user interface to view and manage customer information, as well as plan delivery schedules for different time slots.
+The project is a Delivery Scheduler project is a logistics solution designed to help manage and organize delivery schedules efficiently. It provides a user interface to view and manage customer information, as well as plan delivery schedules for different time slots.
 
 ## Table of Contents
 
